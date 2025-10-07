@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulir Pendaftaran Klinik - UNIPDU</title>
+    <style>
+        /* ======== STYLE HALAMAN ======== */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f9fb;
+        }
+
+        header {
+            background-color: #e5eff3;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background-color: #0078b7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005f8a;
+        }
+
+        section {
+            margin-top: 40px;
+        }
+
+        article {
+            margin-bottom: 30px;
+        }
+
+        table.schedule {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table.schedule th,
+        table.schedule td {
+            border: 1px solid #999;
+            text-align: center;
+            padding: 8px;
+        }
+
+        table.schedule th {
+            background-color: #d6eaf8;
+        }
+
+        ul {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            list-style-type: disc;
+        }
+
+        footer {
+            background-color: #394044;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer a {
+            color: #00ccff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Formulir Pendaftaran Klinik - UNIPDU</h2>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <h1>FORMULIR SURVEY DASAR</h1>
+                <form action="submit.html" method="POST">
+                    <table>
+                        <tr>
+                            <td><label for="nama">Nama Lengkap:</label></td>
+                            <td><input type="text" id="nama" name="nama" required autofocus></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email:</label></td>
+                            <td><input type="email" id="email" name="email" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="website">Website/Blog:</label></td>
+                            <td><input type="url" id="website" name="website" placeholder="https://contoh.com"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="password">Password:</label></td>
+                            <td><input type="password" id="password" name="password" required></td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin:</td>
+                            <td>
+                                <input type="radio" id="laki" name="gender" value="Laki-laki">
+                                <label for="laki">Laki-laki</label>
+                                <input type="radio" id="perempuan" name="gender" value="Perempuan">
+                                <label for="perempuan">Perempuan</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hobi:</td>
+                            <td>
+                                <input type="checkbox" name="hobi" value="Membaca"> Membaca<br>
+                                <input type="checkbox" name="hobi" value="Main FF"> Main FF<br>
+                                <input type="checkbox" name="hobi" value="Coding"> Coding
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="kota">Asal Kota:</label></td>
+                            <td>
+                                <select id="kota" name="kota">
+                                    <option value="Lombok">Lombok</option>
+                                    <option value="Bandung">Bandung</option>
+                                    <option value="Surabaya">Surabaya</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="tanggal">Tanggal Janji Temu:</label></td>
+                            <td><input type="date" id="tanggal" name="tanggal"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="jarak">Jarak Rumah ke Kampus (km):</label></td>
+                            <td><input type="range" id="jarak" name="jarak" min="0" max="50" step="5"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="warna">Warna Kesukaan:</label></td>
+                            <td><input type="color" id="warna" name="warna"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="komentar">Komentar:</label></td>
+                            <td><textarea id="komentar" name="komentar" rows="4" cols="30"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center;">
+                                <input type="submit" value="Kirim">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </article>
+        </section>
+
+        <section>
+            <header style="background-color: #9ad3f0; padding: 5px; text-align: left;">
+                <h2>Jadwal Praktik Dokter</h2>
+            </header>
+
+            <table class="schedule">
+                <tr>
+                    <th>Hari</th>
+                    <th>Jam Praktik</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>08.00 - 12.00</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>13.00 - 17.00</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>08.00 - 12.00</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Langkah Pendaftaran</h2>
+            <ul>
+                <li>Isi formulir dengan lengkap</li>
+                <li>Tekan tombol "KIRIM"</li>
+                <li>Tunggu email konfirmasi</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <h4>Kontak: (0321) xxxxxxxx |
+            <a href="https://unipdu.ac.id" target="_blank">Kunjungi Homepage UNIPDU</a>
+        </h4>
+    </footer>
+</body>
+
+</html>
